@@ -1,5 +1,5 @@
 # ==========================================
-# 1. PYTHON VIRTUAL ENVIRONMENT (WAJIB IGNORE)
+# 1. PYTHON VIRTUAL ENVIRONMENT (SANGAT WAJIB)
 # ==========================================
 venv/
 env/
@@ -19,7 +19,7 @@ __pycache__/
 .pytest_cache/
 
 # ==========================================
-# 3. ENV & SENSITIF
+# 3. ENV & SENSITIF (KONFIGURASI LOKAL)
 # ==========================================
 .env
 
@@ -34,7 +34,7 @@ saved_models/
 *.onnx
 
 # ==========================================
-# 5. JUPYTER NOTEBOOK & EXPERIMENTS
+# 5. JUPYTER NOTEBOOK CHECKPOINTS
 # ==========================================
 .ipynb_checkpoints/
-experiments/exp-*/
+*/.ipynb_checkpoints/
