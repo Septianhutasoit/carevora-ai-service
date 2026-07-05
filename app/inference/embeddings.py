@@ -2,10 +2,12 @@ import os
 from sentence_transformers import SentenceTransformer
 from app.config import settings
 
-class Embeddings:
+class Embedder:
     def __init__(self):
-        # Gunakan model hasil fine-tuning jika ada, jika tidak, gunakan base model BGE-small
-        if os.path.exists(settings.MODEL_PATH):
+        # Memastikan folder model hasil fine-tuning ada DAN berisi file config.json yang valid
+        model_config_path = os.path.join(settings.MODEL_PATH, "config.json")
+        
+        if os.path.exists(model_config_path):
             print(f"Loading fine-tuned model dari: {settings.MODEL_PATH}")
             self.model = SentenceTransformer(settings.MODEL_PATH)
         else:
